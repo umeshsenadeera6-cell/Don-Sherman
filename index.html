@@ -1,0 +1,921 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Don Sherman | The Singing Chef</title>
+<meta name="description" content="Discover Don Sherman — The Singing Chef, culinary artist, entertainer, educator and television personality. Explore his culinary journey, live experiences, masterclasses and media appearances.">
+<meta name="author" content="Don Sherman">
+<meta name="theme-color" content="#050505">
+<link rel="canonical" href="https://donsherman.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Don Sherman | The Singing Chef">
+<meta property="og:description" content="Where culinary art meets entertainment. Chef, singer, entertainer and educator.">
+<meta property="og:url" content="https://donsherman.com/">
+<meta property="og:image" content="https://donsherman.com/images/og-cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23050505'/%3E%3Ccircle cx='32' cy='32' r='22' fill='none' stroke='%23C9A24B' stroke-width='1.5'/%3E%3Ctext x='32' y='41' font-family='Georgia,serif' font-size='24' fill='%23C9A24B' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Don Sherman",
+  "alternateName": "The Singing Chef",
+  "jobTitle": ["Chef", "Singer", "Entertainer", "Educator"],
+  "description": "Don Sherman — The Singing Chef. Culinary artist, performer, television personality and educator with 33+ years of culinary experience.",
+  "url": "https://donsherman.com/",
+  "knowsAbout": ["Sri Lankan Cuisine","Indian Cuisine","Asian Fusion","Thai Cuisine","Malaysian Cuisine","Culinary Education","Live Entertainment"]
+}
+</script>
+
+<style>
+/* ============================================================
+   DON SHERMAN — THE SINGING CHEF
+   Single-file site. Everything below is editable by hand.
+   Brand colours are the five custom properties in :root.
+   ============================================================ */
+
+:root{
+  --ink:#050505;
+  --ink-2:#0a0a0b;
+  --charcoal:#16161a;
+  --ivory:#f4efe6;
+  --ivory-dim:#cfc8bc;
+  --ivory-faint:#9a9287;
+  --gold:#c9a24b;
+  --gold-light:#e7ce8f;
+  --burgundy:#4a1220;
+  --serif:"Playfair Display",Georgia,serif;
+  --sans:Inter,system-ui,-apple-system,sans-serif;
+  --pad:clamp(1.25rem,5vw,4rem);
+  --maxw:1240px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--ink);color:var(--ivory);
+  font-family:var(--sans);font-weight:300;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+::selection{background:rgba(201,162,75,.28)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--pad)}
+.eyebrow{
+  font-size:.625rem;letter-spacing:.34em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:.75rem;
+}
+.eyebrow::before{content:"";width:2rem;height:1px;background:rgba(201,162,75,.5)}
+.rule{height:1px;background:linear-gradient(90deg,transparent,rgba(201,162,75,.35),transparent);border:0}
+.lede{color:var(--ivory-dim);max-width:46ch;font-size:clamp(.95rem,1.4vw,1.0625rem)}
+
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;letter-spacing:-.015em}
+h2{font-size:clamp(1.9rem,5vw,3.5rem)}
+h3{font-size:1.25rem;line-height:1.25}
+
+section{padding-block:clamp(4rem,9vw,7.5rem);position:relative}
+.section-head{display:flex;flex-direction:column;gap:1.25rem;margin-bottom:clamp(2.5rem,5vw,4rem)}
+
+/* ---------- reveal on scroll (CSS + tiny observer) ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;inset-inline:0;top:0;z-index:50;
+  padding-block:1.25rem;transition:background .5s,padding .5s,border-color .5s;
+  border-bottom:1px solid transparent;
+}
+header.scrolled{
+  background:rgba(5,5,5,.82);backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  padding-block:.75rem;border-bottom-color:rgba(201,162,75,.14);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.logo{display:flex;flex-direction:column;line-height:1}
+.logo b{font-family:var(--serif);font-weight:500;font-size:1rem;letter-spacing:.2em}
+.logo span{font-size:.5rem;letter-spacing:.34em;color:rgba(201,162,75,.75);padding-top:.35rem}
+.nav ul{display:none;gap:1.75rem;list-style:none}
+.nav ul a{font-size:.625rem;letter-spacing:.18em;color:var(--ivory-dim);transition:color .3s;position:relative}
+.nav ul a:hover,.nav ul a[aria-current]{color:var(--gold)}
+.nav ul a::after{content:"";position:absolute;left:0;bottom:-4px;height:1px;width:0;background:var(--gold);transition:width .4s cubic-bezier(.16,1,.3,1)}
+.nav ul a:hover::after{width:100%}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.7rem;
+  border:1px solid var(--gold);border-radius:999px;
+  padding:.85rem 1.6rem;font-size:.625rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--gold);cursor:pointer;
+  background:transparent;transition:background .45s,color .45s,box-shadow .45s;
+}
+.btn:hover{background:var(--gold);color:var(--ink);box-shadow:0 0 32px rgba(201,162,75,.35)}
+.btn--solid{background:var(--gold);color:var(--ink)}
+.btn--solid:hover{background:var(--gold-light)}
+.btn--ghost{border-color:rgba(244,239,230,.25);color:var(--ivory)}
+.btn--ghost:hover{background:var(--ivory);color:var(--ink);box-shadow:none}
+.btn--sm{padding:.6rem 1.1rem;font-size:.5625rem}
+
+.burger{display:grid;place-items:center;width:2.6rem;height:2.6rem;border:1px solid rgba(201,162,75,.25);border-radius:999px;background:none;cursor:pointer}
+.burger span{display:block;width:1rem;height:1px;background:var(--gold);transition:transform .4s,opacity .3s}
+.burger span+span{margin-top:5px}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+#mobilemenu{
+  position:fixed;inset:0;z-index:45;background:rgba(5,5,5,.97);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  display:flex;flex-direction:column;justify-content:center;gap:.25rem;
+  padding:5rem var(--pad) 3rem;
+  clip-path:inset(0 0 100% 0);transition:clip-path .6s cubic-bezier(.65,0,.35,1);
+}
+#mobilemenu.open{clip-path:inset(0 0 0 0)}
+#mobilemenu a{font-family:var(--serif);font-size:clamp(1.6rem,7vw,2.6rem);padding-block:.35rem;transition:color .3s}
+#mobilemenu a:hover{color:var(--gold)}
+#mobilemenu .btn{align-self:flex-start;margin-top:2rem}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:100svh;display:flex;align-items:center;
+  padding-top:7rem;padding-bottom:5rem;overflow:hidden;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(58% 45% at 65% 32%,rgba(201,162,75,.20),transparent 62%),
+    radial-gradient(60% 55% at 10% 88%,rgba(74,18,32,.42),transparent 65%),
+    radial-gradient(90% 90% at 50% 50%,transparent 30%,var(--ink) 100%);
+}
+.hero-grid{display:grid;gap:2.5rem;align-items:center;position:relative;z-index:1}
+.hero h1{font-size:clamp(3rem,13vw,9rem);letter-spacing:-.03em;line-height:.84}
+.hero h1 .gold{
+  background:linear-gradient(100deg,#8c6b24,#e7ce8f 35%,#fff6df 48%,#c9a24b 62%,#8c6b24);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .sub{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(1rem,3vw,1.9rem);letter-spacing:.3em;
+  text-transform:uppercase;color:var(--ivory-dim);padding-top:1.25rem;
+}
+.hero .roles{font-size:.6875rem;letter-spacing:.34em;text-transform:uppercase;color:rgba(201,162,75,.85)}
+.hero .tagline{font-family:var(--serif);font-size:clamp(1.05rem,2.2vw,1.35rem);color:var(--ivory-dim);max-width:26rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.85rem;padding-top:.5rem}
+
+/* portrait */
+.portrait{position:relative;max-width:380px;margin-inline:auto;width:100%}
+.portrait figure{position:relative;aspect-ratio:3/4;overflow:hidden;background:var(--ink-2)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:top}
+.portrait figure::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,transparent 35%,rgba(5,5,5,.55));
+}
+.portrait .corner{position:absolute;width:4rem;height:4rem;border:0 solid rgba(201,162,75,.5)}
+.portrait .tl{top:-.75rem;left:-.75rem;border-top-width:1px;border-left-width:1px}
+.portrait .br{bottom:-.75rem;right:-.75rem;border-bottom-width:1px;border-right-width:1px}
+
+/* Placeholder shown wherever a real photo has not been added yet.
+   Delete the .ph class from an element once you drop in a real <img>. */
+.ph{
+  position:relative;display:grid;place-items:center;text-align:center;
+  background:
+    radial-gradient(120% 90% at 30% 15%,#2a2119,#161213 55%,#060607),
+    var(--ink-2);
+  color:rgba(201,162,75,.55);
+  font-size:.5625rem;letter-spacing:.3em;text-transform:uppercase;padding:1rem;
+}
+.ph::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 78% 22%,rgba(201,162,75,.2),transparent 46%);
+}
+.ph span{position:relative;max-width:80%}
+.ph span::before{content:"";display:block;width:2rem;height:1px;background:rgba(201,162,75,.4);margin:0 auto .6rem}
+
+.scrolldot{
+  position:absolute;bottom:1.75rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:.6rem;z-index:2;
+  font-size:.5rem;letter-spacing:.34em;color:var(--ivory-faint);
+}
+.scrolldot i{display:block;width:22px;height:38px;border:1px solid rgba(201,162,75,.35);border-radius:999px;position:relative}
+.scrolldot i::after{
+  content:"";position:absolute;top:7px;left:50%;margin-left:-2.5px;
+  width:5px;height:5px;border-radius:50%;background:var(--gold);
+  animation:dot 2s ease-in-out infinite;
+}
+@keyframes dot{0%{transform:translateY(0);opacity:0}30%{opacity:1}100%{transform:translateY(18px);opacity:0}}
+
+/* ---------- statement ---------- */
+.statement{border-top:1px solid rgba(201,162,75,.08)}
+.statement h2{font-size:clamp(2.2rem,8vw,6rem);letter-spacing:-.02em}
+.claims{list-style:none;padding-top:2.5rem;display:flex;flex-direction:column;gap:.35rem}
+.claims li{font-family:var(--serif);font-weight:400;font-size:clamp(1.2rem,3.6vw,2.2rem);color:var(--ivory-dim)}
+
+/* ---------- stats ---------- */
+.stats{background:var(--ink-2);border-block:1px solid rgba(201,162,75,.08)}
+.stats dl{display:flex;flex-direction:column}
+.stats .row{display:grid;gap:.35rem;padding-block:1.75rem;border-top:1px solid rgba(201,162,75,.14)}
+.stats .row:last-child{border-bottom:1px solid rgba(201,162,75,.14)}
+.stats dd{font-family:var(--serif);font-size:clamp(3rem,11vw,7.5rem);line-height:.84;letter-spacing:-.03em}
+.stats dt{font-size:.6875rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(201,162,75,.85)}
+.stats .note{font-size:.75rem;color:var(--ivory-faint)}
+
+/* ---------- generic grid + cards ---------- */
+.grid{display:grid;gap:1.25rem}
+.card{
+  border:1px solid rgba(201,162,75,.12);
+  background:linear-gradient(180deg,rgba(38,38,44,.5),rgba(10,10,11,.85));
+  display:flex;flex-direction:column;overflow:hidden;
+  transition:border-color .5s,transform .5s cubic-bezier(.16,1,.3,1);
+}
+.card:hover{border-color:rgba(201,162,75,.4);transform:translateY(-4px)}
+.card .media{aspect-ratio:16/10;overflow:hidden}
+.card .media>*{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.card:hover .media>*{transform:scale(1.07)}
+.card .body{padding:1.35rem;display:flex;flex-direction:column;gap:.6rem;flex:1}
+.card .meta{font-size:.5625rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ivory-faint)}
+.card p{font-size:.8125rem;color:var(--ivory-dim);flex:1}
+.card h3{transition:color .4s}
+.card:hover h3{color:var(--gold)}
+
+/* ---------- cuisines ---------- */
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.5rem}
+.tab{
+  border:1px solid rgba(244,239,230,.12);border-radius:999px;
+  padding:.55rem 1.1rem;font-size:.5625rem;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--ivory-dim);background:none;cursor:pointer;
+  transition:all .4s cubic-bezier(.16,1,.3,1);
+}
+.tab:hover{border-color:rgba(201,162,75,.5);color:var(--gold)}
+.tab[aria-selected=true]{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.cuisine{display:grid;gap:2rem;align-items:start}
+.cuisine[hidden]{display:none}
+.cuisine .panel-media{aspect-ratio:16/10;overflow:hidden;border:1px solid rgba(201,162,75,.12)}
+.cuisine .panel-media>*{width:100%;height:100%;object-fit:cover}
+.cuisine h3{font-size:clamp(1.6rem,4vw,2.6rem)}
+.cuisine .tag{font-family:var(--serif);font-size:1.1rem;color:rgba(201,162,75,.9)}
+.dishes{list-style:none;display:grid;gap:.45rem;padding-top:.5rem}
+.dishes li{display:flex;align-items:center;gap:.7rem;font-size:.8125rem;color:var(--ivory-dim)}
+.dishes li::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--gold);flex:none}
+
+/* ---------- signature band ---------- */
+.signature{background:#000;text-align:center}
+.signature h2{font-size:clamp(2.6rem,13vw,8rem);letter-spacing:-.035em;line-height:.86}
+.signature .mark{font-size:clamp(.6rem,1.6vw,.9rem);letter-spacing:.34em;color:var(--gold);text-transform:uppercase;padding-top:1.75rem;display:block}
+.wave{display:flex;align-items:flex-end;gap:3px;height:3.5rem;margin-top:3rem;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.wave i{flex:1;background:linear-gradient(180deg,rgba(201,162,75,.75),rgba(201,162,75,.08));animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.45)}}
+
+/* ---------- gallery ---------- */
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem}
+.gallery figure{position:relative;aspect-ratio:1;overflow:hidden;border:1px solid rgba(201,162,75,.1)}
+.gallery figure:nth-child(4n+1){aspect-ratio:3/4}
+.gallery figure>*:first-child{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.gallery figure:hover>*:first-child{transform:scale(1.09)}
+.gallery figcaption{
+  position:absolute;inset:auto 0 0 0;padding:.85rem;
+  background:linear-gradient(180deg,transparent,rgba(5,5,5,.9));
+  font-size:.5625rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ivory);
+  opacity:0;transform:translateY(8px);transition:all .5s cubic-bezier(.16,1,.3,1);
+}
+.gallery figure:hover figcaption{opacity:1;transform:none}
+
+/* ---------- final cta ---------- */
+.final{background:#000;text-align:center;overflow:hidden}
+.final::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(50% 40% at 50% 45%,rgba(201,162,75,.16),transparent 62%);
+}
+.final h2{font-size:clamp(2.4rem,10vw,7rem);letter-spacing:-.03em;line-height:.9;position:relative}
+.orb{
+  position:absolute;top:50%;left:50%;translate:-50% -50%;
+  width:min(70vw,34rem);aspect-ratio:1;border-radius:50%;
+  border:1px solid rgba(201,162,75,.28);
+  background:radial-gradient(circle at 38% 32%,rgba(201,162,75,.16),transparent 62%);
+  animation:breathe 9s ease-in-out infinite;pointer-events:none;
+}
+@keyframes breathe{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.06);opacity:1}}
+
+/* ---------- contact ---------- */
+.contact-grid{display:grid;gap:3rem}
+form{display:grid;gap:1.5rem}
+.fields{display:grid;gap:1.5rem}
+label{display:flex;flex-direction:column;gap:.5rem}
+label>span{font-size:.5625rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}
+input,select,textarea{
+  background:transparent;border:0;border-bottom:1px solid rgba(244,239,230,.15);
+  padding:.75rem 0;font-size:.875rem;font-weight:300;transition:border-color .4s;
+}
+input::placeholder,textarea::placeholder{color:rgba(154,146,135,.7)}
+input:focus,select:focus,textarea:focus{outline:none;border-bottom-color:var(--gold)}
+select option{background:var(--ink)}
+textarea{resize:vertical;min-height:6rem}
+#formnote{font-size:.75rem;color:var(--gold);min-height:1.2em}
+.details{display:grid;gap:1.5rem;align-content:start}
+.details a:hover{color:var(--gold)}
+.details .k{font-size:.5625rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
+.details .v{font-family:var(--serif);font-size:1.05rem}
+.socials{display:flex;flex-wrap:wrap;gap:.6rem}
+.socials a{
+  display:grid;place-items:center;width:2.6rem;height:2.6rem;border-radius:999px;
+  border:1px solid rgba(244,239,230,.12);color:var(--ivory-dim);transition:all .4s;
+}
+.socials a:hover{border-color:rgba(201,162,75,.6);color:var(--gold)}
+.socials svg{width:1rem;height:1rem;fill:none;stroke:currentColor;stroke-width:1.2}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid rgba(201,162,75,.12);padding-block:3rem 2rem;background:var(--ink)}
+.foot-top{display:grid;gap:2.5rem;padding-bottom:2.5rem}
+.foot-nav{list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem}
+.foot-nav a{font-size:.6875rem;letter-spacing:.18em;color:var(--ivory-dim);transition:color .3s}
+.foot-nav a:hover{color:var(--gold)}
+.foot-bottom{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center;padding-top:1.75rem;font-size:.625rem;letter-spacing:.18em;color:var(--ivory-faint)}
+.foot-bottom a:hover{color:var(--gold)}
+
+/* ---------- responsive ---------- */
+@media (min-width:640px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .gallery{grid-template-columns:repeat(3,1fr);gap:1rem}
+  .fields{grid-template-columns:repeat(2,1fr)}
+  .fields label.full{grid-column:1/-1}
+  .stats .row{grid-template-columns:.8fr 1.2fr;gap:2rem;align-items:baseline;padding-block:2.25rem}
+  .foot-top{grid-template-columns:1.4fr 1fr 1fr}
+  .foot-nav{grid-template-columns:1fr}
+}
+@media (min-width:900px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .gallery{grid-template-columns:repeat(4,1fr)}
+  .hero-grid{grid-template-columns:1.05fr .95fr;gap:3rem}
+  .cuisine{grid-template-columns:1fr 1fr;gap:3rem}
+  .contact-grid{grid-template-columns:1.3fr .7fr;gap:4rem}
+  .nav ul{display:flex}
+  .burger{display:none}
+  .hero .roles,.hero .tagline{max-width:none}
+}
+@media (min-width:900px){
+  .hero .portrait{max-width:none}
+}
+
+/* ---------- accessibility ---------- */
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:99;background:var(--ink);border:1px solid var(--gold);color:var(--gold);padding:.7rem 1.2rem;border-radius:999px;font-size:.625rem;letter-spacing:.28em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header id="header">
+  <nav class="nav wrap" aria-label="Primary">
+    <a class="logo" href="#home" aria-label="Don Sherman — home">
+      <b>DON SHERMAN</b><span>THE SINGING CHEF</span>
+    </a>
+    <ul>
+      <li><a href="#home">HOME</a></li>
+      <li><a href="#story">STORY</a></li>
+      <li><a href="#culinary">CULINARY</a></li>
+      <li><a href="#events">EVENTS</a></li>
+      <li><a href="#masterclasses">MASTERCLASSES</a></li>
+      <li><a href="#gallery">GALLERY</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <div style="display:flex;gap:.6rem;align-items:center">
+      <a class="btn btn--sm" href="#contact">BOOK DON</a>
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="mobilemenu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div id="mobilemenu" aria-hidden="true">
+  <a href="#home">HOME</a>
+  <a href="#story">STORY</a>
+  <a href="#culinary">CULINARY</a>
+  <a href="#events">EVENTS</a>
+  <a href="#masterclasses">MASTERCLASSES</a>
+  <a href="#gallery">GALLERY</a>
+  <a href="#contact">CONTACT</a>
+  <a class="btn btn--solid" href="#contact">BOOK DON</a>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div style="display:flex;flex-direction:column;gap:1.5rem">
+      <h1>
+        <span class="sr">Don Sherman — The Singing Chef. Chef, singer, entertainer and educator.</span>
+        <span aria-hidden="true" style="display:block">DON</span>
+        <span aria-hidden="true" class="gold" style="display:block">SHERMAN</span>
+      </h1>
+      <hr class="rule" style="background:linear-gradient(90deg,rgba(201,162,75,.7),transparent)">
+      <p class="sub" aria-hidden="true">The Singing Chef</p>
+      <p class="roles">Chef • Singer • Entertainer • Educator</p>
+      <p class="tagline">Where culinary art meets entertainment.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#story">Explore his story</a>
+        <a class="btn btn--ghost" href="#contact">Book Don</a>
+      </div>
+    </div>
+
+    <!-- PORTRAIT: replace the .ph div below with
+         <img src="images/don-sherman-portrait.jpg" alt="Don Sherman, The Singing Chef"> -->
+    <div class="portrait">
+      <span class="corner tl"></span>
+      <figure>
+        <img src="images/don-sherman-portrait.jpg" alt="Don Sherman, The Singing Chef">
+      </figure>
+      <span class="corner br"></span>
+    </div>
+  </div>
+
+  <a class="scrolldot" href="#story" aria-label="Scroll to the story">SCROLL<i></i></a>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="statement" id="story">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The premise</span>
+      <h2 class="reveal">More than a chef.</h2>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr;gap:2.5rem">
+      <ul class="claims reveal" style="padding-top:0">
+        <li>A culinary artist.</li>
+        <li>A performer.</li>
+        <li>A mentor.</li>
+        <li>An entertainer.</li>
+        <li>A storyteller.</li>
+      </ul>
+      <div class="reveal" style="display:flex;flex-direction:column;gap:1.25rem;max-width:46ch">
+        <hr class="rule">
+        <p class="lede">For more than three decades Don Sherman has moved between the pass and the stage — plating with the precision of a fine-dining chef and performing with the presence of a live entertainer.</p>
+        <p class="lede">Two disciplines that most careers keep apart, practised at the same time, in the same room, for the same audience. The result is not a chef who also sings. It is a format of its own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats">
+  <div class="wrap">
+    <span class="eyebrow" style="margin-bottom:2.5rem">By the numbers</span>
+    <dl>
+      <div class="row reveal"><dd>33+</dd><dt>Years of culinary experience<span class="note" style="display:block;letter-spacing:0;text-transform:none">From apprentice to executive pass</span></dt></div>
+      <div class="row reveal"><dd>10+</dd><dt>Years on television<span class="note" style="display:block;letter-spacing:0;text-transform:none">Shows, features and appearances</span></dt></div>
+      <div class="row reveal"><dd>100s</dd><dt>Of events &amp; experiences<span class="note" style="display:block;letter-spacing:0;text-transform:none">Corporate, private and public stages</span></dt></div>
+      <div class="row reveal"><dd>1</dd><dt>Singing Chef<span class="note" style="display:block;letter-spacing:0;text-transform:none">There is only one</span></dt></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ CULINARY ============ -->
+<section id="culinary">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The craft</span>
+      <h2 class="reveal">A world of flavour</h2>
+      <p class="lede reveal">Six culinary traditions, each learned properly rather than borrowed — and each capable of carrying an entire evening on its own.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Cuisines">
+      <button class="tab" role="tab" aria-selected="true"  aria-controls="c-sri"  id="t-sri">Sri Lankan</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="c-ind"  id="t-ind">Indian</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="c-asi"  id="t-asi">Asian</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="c-tha"  id="t-tha">Thai</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="c-mal"  id="t-mal">Malaysian</button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="c-fus"  id="t-fus">Asian Fusion</button>
+    </div>
+
+    <div class="cuisine" role="tabpanel" id="c-sri" aria-labelledby="t-sri">
+      <div class="panel-media"><div class="ph" style="height:100%"><span>Sri Lankan — photography</span></div></div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <h3>Sri Lankan</h3>
+        <p class="tag">Heat, coconut, and the smell of tempered curry leaves.</p>
+        <p class="lede">Roasted curry powder built from scratch, coconut milk added in stages, and the tempering of mustard seed and curry leaf that tells you dinner has started. Bold, layered, unapologetically spiced — and balanced by sambols that cut straight through the richness.</p>
+        <ul class="dishes"><li>Black pork curry</li><li>Jaffna crab curry</li><li>Hoppers &amp; lunu miris</li><li>Kottu roti</li></ul>
+      </div>
+    </div>
+
+    <div class="cuisine" role="tabpanel" id="c-ind" aria-labelledby="t-ind" hidden>
+      <div class="panel-media"><div class="ph" style="height:100%"><span>Indian — photography</span></div></div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <h3>Indian</h3>
+        <p class="tag">Spice as architecture, not decoration.</p>
+        <p class="lede">Built in layers: whole spice bloomed in fat, ground spice added off the heat, finishing spice at the very end. From the tandoor's dry ferocity to the slow patience of a dum biryani, this is a cuisine of sequence — where the order of the spices matters more than the list.</p>
+        <ul class="dishes"><li>Dum biryani</li><li>Butter chicken</li><li>Tandoori grill</li><li>Dal makhani</li></ul>
+      </div>
+    </div>
+
+    <div class="cuisine" role="tabpanel" id="c-asi" aria-labelledby="t-asi" hidden>
+      <div class="panel-media"><div class="ph" style="height:100%"><span>Asian — photography</span></div></div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <h3>Asian</h3>
+        <p class="tag">Wok heat, umami depth, and absolute precision of timing.</p>
+        <p class="lede">A discipline of seconds. Wok hei — the breath of the wok — exists only at the intersection of fierce heat, dry ingredients and a cook who does not hesitate. Balance is achieved with soy, vinegar, sugar and stock rather than cream.</p>
+        <ul class="dishes"><li>Wok-fired seafood</li><li>Hand-pulled noodles</li><li>Steamed whole fish</li><li>Char siu</li></ul>
+      </div>
+    </div>
+
+    <div class="cuisine" role="tabpanel" id="c-tha" aria-labelledby="t-tha" hidden>
+      <div class="panel-media"><div class="ph" style="height:100%"><span>Thai — photography</span></div></div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <h3>Thai</h3>
+        <p class="tag">Four flavours held in perfect tension.</p>
+        <p class="lede">Sweet, sour, salty, spicy — adjusted by taste until nothing dominates. Pastes pounded rather than blitzed, herbs added raw and late, fish sauce used with the confidence of salt. The most immediately vivid cuisine on the menu, and the least forgiving of imprecision.</p>
+        <ul class="dishes"><li>Green curry</li><li>Tom yum goong</li><li>Som tam</li><li>Massaman</li></ul>
+      </div>
+    </div>
+
+    <div class="cuisine" role="tabpanel" id="c-mal" aria-labelledby="t-mal" hidden>
+      <div class="panel-media"><div class="ph" style="height:100%"><span>Malaysian — photography</span></div></div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <h3>Malaysian</h3>
+        <p class="tag">Three culinary traditions on one plate.</p>
+        <p class="lede">Malay, Chinese and Indian technique layered over centuries into something singular. Rempah fried until the oil splits, coconut and tamarind pulling sweet against sour, and the slow-built complexity of a rendang cooked far past the point most cooks would stop.</p>
+        <ul class="dishes"><li>Beef rendang</li><li>Nasi lemak</li><li>Laksa</li><li>Satay &amp; peanut sauce</li></ul>
+      </div>
+    </div>
+
+    <div class="cuisine" role="tabpanel" id="c-fus" aria-labelledby="t-fus" hidden>
+      <div class="panel-media"><div class="ph" style="height:100%"><span>Asian Fusion — photography</span></div></div>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <h3>Asian Fusion</h3>
+        <p class="tag">Classical discipline, contemporary plate.</p>
+        <p class="lede">Fusion earns its name only when both traditions are understood first. French sauce technique carrying a Sri Lankan spice profile. Japanese restraint applied to South Asian ingredients. Fine-dining plating in service of flavours that came from a home kitchen — modern, but never rootless.</p>
+        <ul class="dishes"><li>Curry-leaf butter sauce</li><li>Miso-glazed pork belly</li><li>Spiced dashi broths</li><li>Coconut &amp; yuzu</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIGNATURE ============ -->
+<section class="signature">
+  <div class="wrap">
+    <h2 class="reveal">
+      <span class="sr">Cook. Sing. Entertain. The Singing Chef.</span>
+      <span aria-hidden="true" style="display:block">COOK.</span>
+      <span aria-hidden="true" style="display:block">SING.</span>
+      <span aria-hidden="true" style="display:block">ENTERTAIN.</span>
+    </h2>
+    <span class="mark" aria-hidden="true">The Singing Chef</span>
+    <p class="lede reveal" style="margin:2rem auto 0;text-align:center">One person, two disciplines, running at the same time. The pan keeps the tempo, the plate lands on the beat, and the room never quite works out where the meal ends and the performance begins.</p>
+    <div class="wave" id="wave" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ EVENTS ============ -->
+<section id="events">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Live experiences</span>
+      <h2 class="reveal">Don, live.</h2>
+      <p class="lede reveal">Make your event unforgettable. Every booking is scoped around your room, your guests and your programme.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card reveal">
+        <div class="media"><div class="ph" style="height:100%"><span>Live cooking</span></div></div>
+        <div class="body"><span class="meta">60–120 min · Galas &amp; launches</span><h3>Live Cooking</h3><p>A full station built into your room. Guests watch technique happen at speed — the tempering, the sear, the plate — and eat it thirty seconds later.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="media"><div class="ph" style="height:100%"><span>Live singing</span></div></div>
+        <div class="body"><span class="meta">2 × 45 min sets · Dinners</span><h3>Live Singing</h3><p>A full vocal set — jazz standards, soul, contemporary and requests — delivered with the room-reading instinct of a thousand functions.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="media"><div class="ph" style="height:100%"><span>Corporate events</span></div></div>
+        <div class="body"><span class="meta">Half day / evening · Brands</span><h3>Corporate Events</h3><p>Conferences, incentives, product launches and client evenings — built around your agenda and run sheet, not a fixed package.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="media"><div class="ph" style="height:100%"><span>Private events</span></div></div>
+        <div class="body"><span class="meta">Evening · Weddings</span><h3>Private Events</h3><p>Weddings, anniversaries and intimate dinners at home. A tailored menu, a live performance, and an evening guests describe for months.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="media"><div class="ph" style="height:100%"><span>MC &amp; hosting</span></div></div>
+        <div class="body"><span class="meta">Per event · Awards</span><h3>MC &amp; Hosting</h3><p>Hosting with a decade of live camera work behind it. Timing, warmth, and improvisation when the schedule slips.</p></div>
+      </article>
+      <article class="card reveal">
+        <div class="media"><div class="ph" style="height:100%"><span>Culinary experiences</span></div></div>
+        <div class="body"><span class="meta">3–5 courses · Fine dining</span><h3>Culinary Experiences</h3><p>Curated multi-course journeys — a themed menu, narrated courses, paired music. Dinner as a designed experience.</p></div>
+      </article>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:3rem">
+      <a class="btn btn--solid" href="#contact">Book Don for your event</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MASTERCLASSES ============ -->
+<section id="masterclasses" style="background:var(--ink-2);border-block:1px solid rgba(201,162,75,.08)">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Education</span>
+      <h2 class="reveal">Learn from The Singing Chef</h2>
+      <p class="lede reveal">Programmes drawn straight from professional practice — taught hands-on, at the standard of a working kitchen rather than a demonstration table.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card reveal"><div class="body"><span class="meta">All levels · 3 hours</span><h3>Culinary Masterclass</h3><p>Knife discipline, heat control, seasoning by taste rather than by measure, and the structure behind a dish that works every time.</p></div></article>
+      <article class="card reveal"><div class="body"><span class="meta">Foundation · 4 hours</span><h3>Sri Lankan Cuisine</h3><p>Roasting and grinding your own curry powder, staged coconut milk, tempering technique, and the sambols that make the table.</p></div></article>
+      <article class="card reveal"><div class="body"><span class="meta">Intermediate · 4 hours</span><h3>Asian Cuisine</h3><p>Wok control, the sequence of a stir-fry, balancing soy, vinegar and sugar, and reading texture as carefully as flavour.</p></div></article>
+      <article class="card reveal"><div class="body"><span class="meta">Intermediate · 2 hours</span><h3>Plating &amp; Presentation</h3><p>Composition, negative space, height, sauce work and colour — how a plate is read by the eye before it is tasted.</p></div></article>
+      <article class="card reveal"><div class="body"><span class="meta">Advanced · 6 hours</span><h3>Professional Cooking</h3><p>For working cooks. Volume production, mise en place under pressure, costing, menu architecture and holding a section.</p></div></article>
+      <article class="card reveal"><div class="body"><span class="meta">All levels · 2–3 hours</span><h3>Live Cooking Workshop</h3><p>Part class, part performance. Teams cook against the clock while Don works the room — the most requested corporate format.</p></div></article>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:3rem">
+      <a class="btn" href="#contact">Book a masterclass</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">The archive</span>
+      <h2 class="reveal">Gallery</h2>
+      <p class="lede reveal">Plates, stages, studios and students — the working life behind the brand.</p>
+    </div>
+
+    <!-- Replace each .ph div with <img src="images/gallery/g1.jpg" alt="..."> -->
+    <div class="gallery reveal">
+      <figure><div class="ph" style="height:100%"><span>Plated &amp; passed</span></div><figcaption>Culinary</figcaption></figure>
+      <figure><div class="ph" style="height:100%"><span>On set</span></div><figcaption>Television</figcaption></figure>
+      <figure><div class="ph" style="height:100%"><span>The ballroom</span></div><figcaption>Events</figcaption></figure>
+      <figure><div class="ph" style="height:100%"><span>Second set</span></div><figcaption>Music</figcaption></figure>
+      <figure><div class="ph" style="height:100%"><span>The pass</span></div><figcaption>Behind the scenes</figcaption></figure>
+      <figure><div class="ph" style="height:100%"><span>First knife</span></div><figcaption>Students</figcaption></figure>
+      <figure><div class="ph" style="height:100%"><span>Tempering</span></div><figcaption>Culinary</figcaption></figure>
+      <figure><div class="ph" style="height:100%"><span>Live segment</span></div><figcaption>Television</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+  <span class="orb" aria-hidden="true"></span>
+  <div class="wrap" style="position:relative">
+    <h2 class="reveal">Let's create<br>something<br><span style="color:var(--gold)">memorable.</span></h2>
+    <p class="lede reveal" style="margin:2rem auto 2.5rem;text-align:center">Whether it's a culinary experience, corporate event, live performance, masterclass or special celebration — bring The Singing Chef to your stage.</p>
+    <div style="display:flex;gap:.85rem;justify-content:center;flex-wrap:wrap">
+      <a class="btn btn--solid" href="#contact">Book Don Sherman</a>
+      <a class="btn btn--ghost" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Enquiries</span>
+      <h2 class="reveal">Let's talk</h2>
+      <p class="lede reveal">Tell us about the event and we'll come back with availability, formats and a proposal.</p>
+    </div>
+
+    <div class="contact-grid">
+      <form id="enquiry" novalidate>
+        <div class="fields">
+          <label>Name <span class="sr">required</span><input type="text" name="name" required placeholder="Your full name" autocomplete="name"></label>
+          <label>Email<input type="email" name="email" required placeholder="you@company.com" autocomplete="email"></label>
+          <label>Phone<input type="tel" name="phone" placeholder="+00 000 000 0000" autocomplete="tel"></label>
+          <label>Company<input type="text" name="company" placeholder="Optional" autocomplete="organization"></label>
+          <label>Event type
+            <select name="eventType">
+              <option value="">Select an option</option>
+              <option>Live cooking experience</option>
+              <option>Live singing performance</option>
+              <option>The Singing Chef show</option>
+              <option>Corporate event</option>
+              <option>Private celebration</option>
+              <option>MC &amp; hosting</option>
+              <option>Masterclass / workshop</option>
+            </select>
+          </label>
+          <label>Event date<input type="date" name="eventDate"></label>
+          <label class="full">Location<input type="text" name="location" placeholder="City, venue or country"></label>
+          <label class="full">Message<textarea name="message" rows="4" placeholder="Guest numbers, running order, what you have in mind…"></textarea></label>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center">
+          <button class="btn btn--solid" type="submit">Send enquiry</button>
+          <p id="formnote" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+
+      <div class="details">
+        <div><span class="k">General</span><a class="v" href="mailto:hello@donsherman.com">hello@donsherman.com</a></div>
+        <div><span class="k">Bookings</span><a class="v" href="mailto:bookings@donsherman.com">bookings@donsherman.com</a></div>
+        <div><span class="k">Phone</span><a class="v" href="tel:+94770000000">+94 77 000 0000</a></div>
+        <div><span class="k">Based in</span><span class="v">Colombo, Sri Lanka</span><p style="font-size:.75rem;color:var(--ivory-faint);padding-top:.3rem">Available worldwide for events, television and masterclasses.</p></div>
+        <div>
+          <span class="k">Follow</span>
+          <div class="socials">
+            <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".9" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10.2 9.4v5.2L14.8 12z" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14.6 21v-8h2.7l.5-3.2h-3.2V7.6c0-.9.3-1.6 1.7-1.6h1.6V3.1A22 22 0 0 0 15.4 3c-2.4 0-4 1.5-4 4.2V9.8H8.6V13h2.8v8z"/></svg></a>
+            <a href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14.2 3v10.9a3.4 3.4 0 1 1-3.4-3.4c.3 0 .6 0 .9.1"/><path d="M14.2 3c.4 2.6 2 4.2 4.6 4.5"/></svg></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="3"/><path d="M7.4 10.5V17M7.4 7.2v.1M11.4 17v-3.7c0-1.5 1-2.6 2.4-2.6s2.4 1.1 2.4 2.6V17"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <p style="font-family:var(--serif);font-size:1.7rem;letter-spacing:.14em">DON SHERMAN</p>
+        <p style="font-size:.625rem;letter-spacing:.34em;color:rgba(201,162,75,.75);padding-top:.5rem">THE SINGING CHEF</p>
+        <p style="font-size:.6875rem;letter-spacing:.18em;color:var(--ivory-faint);padding-top:.6rem">Chef • Singer • Entertainer • Educator</p>
+      </div>
+      <nav aria-label="Footer">
+        <p class="eyebrow" style="margin-bottom:1rem">Navigate</p>
+        <ul class="foot-nav">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#story">STORY</a></li>
+          <li><a href="#culinary">CULINARY</a></li>
+          <li><a href="#events">EVENTS</a></li>
+          <li><a href="#masterclasses">MASTERCLASSES</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="eyebrow" style="margin-bottom:1rem">Connect</p>
+        <p><a href="mailto:hello@donsherman.com" style="font-size:.8125rem;color:var(--ivory-dim)">hello@donsherman.com</a></p>
+        <p style="padding-top:.4rem"><a href="tel:+94770000000" style="font-size:.8125rem;color:var(--ivory-dim)">+94 77 000 0000</a></p>
+        <p style="font-size:.8125rem;color:var(--ivory-faint);padding-top:.4rem">Colombo, Sri Lanka</p>
+      </div>
+    </div>
+    <hr class="rule">
+    <div class="foot-bottom">
+      <p>© <span id="year">2026</span> Don Sherman. All rights reserved.</p>
+      <p style="display:flex;gap:1.5rem"><a href="#">PRIVACY POLICY</a><a href="#">TERMS</a><a href="#home">BACK TO TOP ↑</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   All behaviour for the site. Roughly 60 lines, no libraries.
+   ============================================================ */
+(function () {
+  'use strict';
+
+  /* Guarded so the whole script can never die on an old/odd environment. */
+  var reduce = typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* --- header solidifies on scroll --- */
+  var header = document.getElementById('header');
+  function onScroll() { header.classList.toggle('scrolled', window.scrollY > 60); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* --- mobile menu --- */
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobilemenu');
+  function setMenu(open) {
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    menu.classList.toggle('open', open);
+    menu.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function () {
+    setMenu(burger.getAttribute('aria-expanded') !== 'true');
+  });
+  menu.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') setMenu(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') setMenu(false);
+  });
+
+  /* --- scroll reveals --- */
+  var reveals = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    reveals.forEach(function (el) { io.observe(el); });
+  }
+
+  /* --- cuisine tabs (with arrow-key support) --- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function selectTab(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', String(on));
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { selectTab(tab); });
+    tab.addEventListener('keydown', function (e) {
+      var next = e.key === 'ArrowRight' ? i + 1 : e.key === 'ArrowLeft' ? i - 1 : -1;
+      if (next < 0) return;
+      e.preventDefault();
+      var target = tabs[(next + tabs.length) % tabs.length];
+      target.focus();
+      selectTab(target);
+    });
+  });
+
+  /* --- waveform bars under the signature section --- */
+  var wave = document.getElementById('wave');
+  if (wave) {
+    for (var i = 0; i < 72; i++) {
+      var bar = document.createElement('i');
+      bar.style.height = (18 + Math.abs(Math.sin(i * 0.42)) * 58 + Math.abs(Math.cos(i * 0.19)) * 22) + '%';
+      bar.style.animationDelay = (i * 0.045) + 's';
+      if (reduce) bar.style.animation = 'none';
+      wave.appendChild(bar);
+    }
+  }
+
+  /* --- nav highlighting --- */
+  var sections = ['home','story','culinary','events','masterclasses','gallery','contact'];
+  var links = {};
+  sections.forEach(function (id) {
+    var a = document.querySelector('.nav ul a[href="#' + id + '"]');
+    if (a) links[id] = a;
+  });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = links[entry.target.id];
+        if (!link) return;
+        if (entry.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].removeAttribute('aria-current'); });
+          link.setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    sections.forEach(function (id) {
+      var el = document.getElementById(id);
+      if (el) spy.observe(el);
+    });
+  }
+
+  /* --- enquiry form ---
+     Front-end only. To receive enquiries, either:
+       a) set action="https://formspree.io/f/YOUR_ID" method="POST" on the
+          <form> and delete this handler, or
+       b) POST the `data` object below to your own endpoint.            */
+  var form = document.getElementById('enquiry');
+  var note = document.getElementById('formnote');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      note.style.color = '#c0392b';
+      note.textContent = 'Please add your name and a valid email.';
+      form.reportValidity();
+      return;
+    }
+    var data = Object.fromEntries(new FormData(form).entries());
+    console.info('Enquiry payload — connect this to your form endpoint:', data);
+    note.style.color = 'var(--gold)';
+    note.textContent = 'Thank you — your enquiry has been captured.';
+    form.reset();
+  });
+
+  /* --- footer year --- */
+  document.getElementById('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
